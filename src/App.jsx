@@ -1,17 +1,13 @@
-import { useState } from 'react'
-
+import { useState } from "react";
+import Button from "./components/Button";
+import Navegation from "./components/layouts/Navegation";
 
 function App() {
-  
-
   return (
     <>
-    <h1>
-      SLA
-    </h1>
-      
+      <Navegation />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

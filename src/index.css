@@ -1,1 +1,16 @@
 @import "tailwindcss";
+@config "../tailwind.config.js";
+@import "@fontsource/lato";
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+body {
+  font-family: "Lato", serif;
+  font-weight: 400;
+  width: 100vw ;
+  height: 100vh;
+}

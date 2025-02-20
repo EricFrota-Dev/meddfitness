@@ -4,9 +4,10 @@ import Navibar from "./Navibar";
 const Navegation = () => {
   return (
     <>
-      <div className="justify-end h-20 w-full flex items-center">
+      <div className="justify-between h-20 w-full fixed flex items-center border-b border-b-4 pr-6 pl-6">
+        <Logo />
+
         <Navibar />
-        
       </div>
     </>
   );

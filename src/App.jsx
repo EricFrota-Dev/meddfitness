@@ -1,4 +1,4 @@
-import Navegation from "./components/layouts/Navegation";
+import Navegation from "./components/layouts/Navigation";
 import Footer from "./components/layouts/Footer";
 import { Route, Routes } from "react-router-dom";
 import { navegation } from "./constants";

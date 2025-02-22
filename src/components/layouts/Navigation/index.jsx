@@ -1,5 +1,5 @@
 import Logo from "./Logo";
-import Navibar from "./Navibar";
+import Navibar from "./Navbar";
 
 const Navegation = () => {
   return (

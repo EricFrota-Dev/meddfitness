@@ -1,27 +1,26 @@
-import { NavLink } from "react-router-dom";
-import { navegation } from "../../../constants";
+import HamburgerMenu from "./hamburgerMenu";
+import { motion } from "motion/react";
+import { AnimatePresence } from "motion/react";
+import { entryAnimation } from "../../../constants/animations";
 
-const Sidebar = () => {
+const Sidebar = ({ onClick, sidebarState, children }) => {
   return (
-    <aside className="h-screen">
-      <nav>
-        <ul className="xl:hidden flex bg-6/40">
-          {navegation.map(({ url, title }, index) => (
-            <li
-              key={index}
-              className={`${
-                location.pathname === `/${url}` ? "text-2 scale-102" : ""
-              } `}>
-              <NavLink
-                to={url}
-                className="relative h-full p-4 flex items-center font-bold text-[0.8em] hover:bg-4/40 hover:scale-102 active:scale-98 active:bg-4/80 transition-transform">
-                {title}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </aside>
+    <>
+      <HamburgerMenu onClick={onClick} sidebarState={sidebarState} />
+      <AnimatePresence>
+        {sidebarState && (
+          <motion.aside
+            className="mt-16 w-90 h-screen bg-5/50 backdrop-blur-md fixed -top-16 right-0 pt-16 border border-4 xl:hidden"
+            variants={entryAnimation()}
+            initial="from_right"
+            animate="default"
+            exit="from_right"
+          >
+            <ul className="flex flex-col gap-2 p-4">{children}</ul>
+          </motion.aside>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
 

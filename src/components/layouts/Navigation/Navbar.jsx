@@ -1,25 +1,19 @@
-import { navegation } from "../../../constants";
-import { NavLink, useLocation } from "react-router-dom";
+import NavItems from "./NavItems";
+import Sidebar from "./Sidebar";
+import useSidebar from "../../../hooks/useSidebar";
 
 const Navibar = () => {
-  const location = useLocation();
+  const { toggle, isSidebarOpen } = useSidebar();
 
   return (
-    <ul className="hidden xl:flex h-full">
-      {navegation.map(({ url, title }, index) => (
-        <li
-          key={index}
-          className={`${
-            location.pathname === `/${url}` ? "text-2 scale-102" : ""
-          } `}>
-          <NavLink
-            to={url}
-            className="relative h-full p-4 flex items-center font-bold text-[0.8em] hover:bg-4/40 hover:scale-102 active:scale-98 active:bg-4/80 transition-transform">
-            {title}
-          </NavLink>
-        </li>
-      ))}
-    </ul>
+    <>
+        <ul className="hidden xl:flex h-full">
+          <NavItems sidebarState={isSidebarOpen} />
+        </ul>
+        <Sidebar onClick={toggle} sidebarState={isSidebarOpen}>
+          <NavItems sidebarState={isSidebarOpen} />
+        </Sidebar>
+    </>
   );
 };
 

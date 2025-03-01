@@ -1,16 +1,10 @@
-import useAppContext from "../../../contexts/app/useAppContext";
 import { motion } from "motion/react";
 
-const HamburgerMenu = () => {
-  const { isNavOppen, setIsNavOppen } = useAppContext();
-  const handleClick = () => {
-    console.log(isNavOppen);
-    setIsNavOppen(!isNavOppen);
-    console.log(isNavOppen);
-  };
-
+const HamburgerMenu = ({ onClick, sidebarState }) => {
   return (
-    <button onClick={handleClick} className="flex xl:hidden">
+    <button
+      onClick={onClick}
+      className="cursor-pointer flex z-50 xl:hidden p-2 hover:bg-4/50 hover:scale-102">
       <motion.svg
         width="24"
         height="24"
@@ -20,7 +14,7 @@ const HamburgerMenu = () => {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        animate={isNavOppen ? "open" : "closed"}
+        animate={sidebarState ? "open" : "closed"}
         className="w-8 h-8">
         <motion.line
           x1="4"

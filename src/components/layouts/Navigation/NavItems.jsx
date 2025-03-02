@@ -2,7 +2,7 @@ import { navegation } from "../../../constants";
 import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { motion } from "motion/react";
-import { entryAnimation } from "../../../constants/animations";
+import { entryMoveAnimation } from "../../../constants/animations";
 
 const NavItems = ({ sidebarState }) => {
   const location = useLocation();
@@ -12,13 +12,13 @@ const NavItems = ({ sidebarState }) => {
         <motion.li
           key={index}
           className="flex m-1 items-center"
-          variants={entryAnimation(0.03 * index)}
+          variants={entryMoveAnimation(0.03 * index)}
           initial={sidebarState ? "from_right" : ""}
           animate={sidebarState ? "default" : ""}
           exit={sidebarState ? "from_right" : ""}>
           <NavLink
             to={url}
-            className={`relative rounded-md py-1 px-3 flex items-center font-bold text-[0.8em] hover:bg-4/40 hover:scale-102 active:scale-98 active:bg-4/80 transition-transform w-fit  ${
+            className={`relative rounded-md py-1 px-3 flex items-center text-[0.8em] hover:bg-4/40 hover:scale-102 active:scale-98 active:bg-4/80 transition-transform w-fit  ${
               location.pathname === `/${url}` && "scale-102"
             }`}>
             <motion.div

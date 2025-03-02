@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}", // Agora inclui corretamente todos os arquivos dentro de src
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -14,8 +12,7 @@ module.exports = {
         6: "#000000",
       },
 
-             
-        spacing: {
+      spacing: {
         128: "32rem",
         144: "36rem",
       },
@@ -27,31 +24,23 @@ module.exports = {
         body: {
           backgroundColor: theme("colors.5"),
           color: theme("colors.1"),
-          
-         
         },
         h1: {
-          fontSize: "2rem",
+          fontSize: "1.5rem",
           fontWeight: "900",
         },
         h2: {
-          fontSize: "1.75rem",
-          fontWeight: "semibold",
+          fontSize: "1.25rem",
+          fontWeight: "500",
         },
-        button: {
-          padding: "0.75rem 1.5rem",
-          backgroundColor: theme("colors.primary"),
-          color: "white",
-          borderRadius: "0.5rem",
-          fontWeight: "bold",
-          transition: "background-color 0.3s",
-        },
-        "button:hover": {
-          backgroundColor: theme("colors.secondary"),
+        h3: {
+          fontSize: "1rem",
+          fontWeight: "300",
         },
         span: {
-            color:theme("colors.2")
-        }
+          color: theme("colors.2"),
+          textShadow: theme("colors.2"),
+        },
       });
     },
   ],

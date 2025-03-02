@@ -1,11 +1,21 @@
 import { motion } from "motion/react";
+import { useState, useEffect } from "react";
 
 const HamburgerMenu = ({ onClick, sidebarState }) => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  console.log("red");
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <button
       onClick={onClick}
       className="cursor-pointer flex z-50 xl:hidden p-2 hover:bg-4/50 hover:scale-102">
       <motion.svg
+        key={windowWidth}
         width="24"
         height="24"
         viewBox="0 0 24 24"
@@ -32,6 +42,7 @@ const HamburgerMenu = ({ onClick, sidebarState }) => {
           y1="12"
           x2="20"
           y2="12"
+          initial={{ opacity: 1 }}
           variants={{
             closed: { opacity: 1 },
             open: { opacity: 0 },

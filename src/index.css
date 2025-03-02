@@ -9,8 +9,8 @@
 } */
 
 body {
-  font-family: "Lato", serif;
-  font-weight: 400;
+  font-family: "Poppins", serif;
+  font-weight: 200;
 }
 
 #root {
@@ -19,4 +19,19 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+section {
+  padding: 0 6%;
+}
+.neon {
+  text-shadow: 0 0 5px #3ec1c9, 0 0 10px #3ec1c9;
+}
+.radial-gradient {
+  background-image: radial-gradient(
+    farthest-corner at 0px 0px,
+    #142731 0%,
+    #1a3d47 50%,
+    #142731 100%
+  );
 }

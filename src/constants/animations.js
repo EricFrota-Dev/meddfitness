@@ -3,6 +3,7 @@ import { spring } from "motion";
 export const hoverAnimation = {
   initial: { scale: 1 },
   hover: { scale: 1.05 },
+  tap: { scale: 0.95 },
 };
 
 export const smooth = {

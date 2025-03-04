@@ -2,11 +2,17 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { events } from "../../constants";
-import { smooth } from "../../constants/animations";
+import {
+  entryAnimation,
+  hoverAnimation,
+  smooth,
+} from "../../constants/animations";
 import EventCard from "./EventCard";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 const EventsCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isRight, setIsRight] = useState(false);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -16,36 +22,63 @@ const EventsCarousel = () => {
     return () => clearInterval(intervalId); // Limpar o intervalo ao desmontar
   }, [currentIndex]);
 
-  const handleClick = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % events.length);
-    console.log(currentIndex); // Trocar o banner ao clicar
-  };
+  const handleClick = (side) => {
+    setCurrentIndex((prevIndex) => {
+      let newIndex = prevIndex + side;
+
+      if (newIndex < 0) {
+        newIndex = events.length - 1; // Volta para o último item ao ultrapassar o primeiro
+      } else if (newIndex >= events.length) {
+        newIndex = 0; // Volta para o primeiro item ao ultrapassar o último
+      }
+      setIsRight(side == 1 ? true : false);
+      return newIndex;
+    });
+  }; // Trocar o banner ao clicar
 
   return (
     <>
       <motion.div
-        className="relative"
+        className="relative w-full"
         variants={smooth}
         initial="initial"
         animate="default"
       >
-        <div className="overflow-hidden">
-          <motion.div
-            className="flex"
-            key={currentIndex}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
+        <motion.div
+          className="w-full flex items-center justify-center"
+          key={currentIndex}
+          variants={entryAnimation()}
+          initial={isRight ? "from_right" : "from_left"}
+          animate="default"
+        >
+          <EventCard
+            src={events[currentIndex].src}
+            alt={events[currentIndex].name}
+            name={events[currentIndex].name}
+          />
+        </motion.div>
+        <div className="flex items-center justify-center gap-8 m-4">
+          <motion.button
+            className="w-8 h-8 rounded-full hover:bg-2 bg-2/60 flex justify-center items-center cursor-pointer"
+            onClick={() => handleClick(-1)}
+            variants={hoverAnimation}
+            whileHover="hover"
+            initial="initial"
+            whileTap="tap"
           >
-            <EventCard
-              src={events[currentIndex].src}
-              alt={events[currentIndex].name}
-              name={events[currentIndex].name}
-            />
-          </motion.div>
+            <FaArrowLeft className="text-5 text-[22px]" />
+          </motion.button>
+          <motion.button
+            className="w-8 h-8 rounded-full bg-2/60 flex hover:bg-2 justify-center items-center cursor-pointer"
+            onClick={() => handleClick(1)}
+            variants={hoverAnimation}
+            whileHover="hover"
+            initial="initial"
+            whileTap="tap"
+          >
+            <FaArrowRight className="text-5 text-[22px]" />
+          </motion.button>
         </div>
-        <button onClick={() => handleClick()}>clique</button>
       </motion.div>
     </>
   );

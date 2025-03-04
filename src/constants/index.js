@@ -15,7 +15,29 @@ import LeandroMoraes from "../assets/Images/perfilPhoto/LeandroMoraes_perfil.png
 import DianaMonteiro from "../assets/Images/perfilPhoto/DianaMonteiro_perfil.png";
 import BetaoMonteiro from "../assets/Images/perfilPhoto/BetaoMonteiro_perfil.png";
 import CassioBirque from "../assets/Images/perfilPhoto/CassioBirque_perfil.png";
+import CarnavalDaIvete from "../assets/Images/events/CarnavalDaIvete.png"
+import EventoMissFit from "../assets/Images/events/EventoMissFit.png"
+import MundoPsychodelico from "../assets/Images/events/MundoPsychodelico.png"
 
+
+export const events = [
+  {
+    id: 0,
+    src: CarnavalDaIvete,
+    name:"Carnaval da Ivete"
+  },
+  {
+    id: 1,
+    src: EventoMissFit,
+    name:"Evento MissFit"
+  },
+  {
+    id: 2,
+    src: MundoPsychodelico,
+    name:"Mundo Psychodelico"
+  },
+
+]
 import Logo from "../assets/images/Logo.svg";
 
 export const stafPerfilPhotos = [

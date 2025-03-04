@@ -7,12 +7,12 @@ const Navibar = () => {
 
   return (
     <>
-        <ul className="hidden xl:flex h-full">
-          <NavItems sidebarState={isSidebarOpen} />
-        </ul>
-        <Sidebar onClick={toggle} sidebarState={isSidebarOpen}>
-          <NavItems sidebarState={isSidebarOpen} />
-        </Sidebar>
+      <ul className="hidden xl:flex h-full">
+        <NavItems sidebarState={isSidebarOpen} />
+      </ul>
+      <Sidebar onClick={toggle} sidebarState={isSidebarOpen}>
+        <NavItems />
+      </Sidebar>
     </>
   );
 };

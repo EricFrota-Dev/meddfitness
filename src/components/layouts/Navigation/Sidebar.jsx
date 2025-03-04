@@ -1,17 +1,16 @@
 import { motion } from "motion/react";
 import { AnimatePresence } from "motion/react";
-import { entryMoveAnimation } from "../../../constants/animations";
+import { entryAnimation } from "../../../constants/animations";
 import HamburgerMenu from "./HamburgerMenu";
 
 const Sidebar = ({ onClick, sidebarState, children }) => {
   return (
     <>
-      <HamburgerMenu onClick={onClick} sidebarState={sidebarState} />
       <AnimatePresence>
         {sidebarState && (
           <motion.aside
-            className="mt-16 w-90 h-screen bg-5/50 backdrop-blur-md fixed -top-16 right-0 pt-16 border border-4 xl:hidden"
-            variants={entryMoveAnimation()}
+            className="mt-16 w-90 -z-10 h-screen bg-5/70 backdrop-blur-xl fixed -top-16 right-0 pt-16 border border-4 xl:hidden"
+            variants={entryAnimation()}
             initial="from_right"
             animate="default"
             exit="from_right">
@@ -19,6 +18,7 @@ const Sidebar = ({ onClick, sidebarState, children }) => {
           </motion.aside>
         )}
       </AnimatePresence>
+      <HamburgerMenu onClick={onClick} sidebarState={sidebarState} />
     </>
   );
 };

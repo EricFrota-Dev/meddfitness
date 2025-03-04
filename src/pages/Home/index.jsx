@@ -1,31 +1,78 @@
+import BannerCarousel from "../../components/BannerCarousel";
 import Button from "../../components/Button";
 import GradientCard from "../../components/GradientCard";
+import { motion } from "motion/react";
+import { entryAnimation, pulseAnimation } from "../../constants/animations";
+import { h2 } from "motion/react-client";
 
 const Home = () => {
+  const events = [
+    { title: "Workshop de medicina Esportiva", neonWords: ["Workshop", "de"] },
+    {
+      title: "MegaFitness: O maior concurso fitness do Brasil",
+      neonWords: ["MegaFitness:"],
+    },
+    {
+      title: "Campeonato de Fisiculturismo com a IFBB",
+      neonWords: ["Fisiculturismo"],
+    },
+  ];
   return (
-    <section>
-      <GradientCard>testando sas poha tudo lorem</GradientCard>
-      <GradientCard bordered>testando sas poha tudo lorem</GradientCard>
-      <Button typeBtn="redirect">Comprar agora</Button>
-      <br />
-      <Button typeBtn="redirect">
-        Comprar ingresso <span className="neon">diário</span>
-      </Button>
-      <br />
-      <Button typeBtn="redirect">
-        <strong>Garanta seu ingresso</strong> para o proximo evento
-      </Button>
-      <br />
-      <Button typeBtn="download">GARANTIR O MEU INGRESSO</Button>
-      <br />
-      <Button>CURSOS E TRANSMISSÕES</Button>
-      <br />
-      <Button typeBtn="redirect">SAIBA MAIS</Button>
-      <br />
-      <Button typeBtn="download">FAZER MINHA ESCRIÇÂO</Button>
-      <br />
-      <Button>¬</Button>
-    </section>
+    <>
+      <section id="banners">
+        <BannerCarousel />
+      </section>
+      <section id="MedFuture">
+        <div className="customContainer flex items-center bg-6 xl:min-h-40">
+          <motion.h2
+            className="xl:text-2xl md:text-xl text-sm flex m-auto flex-wrap w-fit justify-center"
+            variants={entryAnimation()}
+            initial="from_right"
+            animate="default">
+            <p className="text-center">
+              O futuro da <span>medicina esportiva</span> e do{" "}
+              <span>fitness</span> começa aqui.
+            </p>
+            <p className="font-extralight text-center">
+              {" "}
+              Viva a experiência, transforme sua performance!
+            </p>
+          </motion.h2>
+        </div>
+      </section>
+      <section id="events">
+        <div className="customContainer flex flex-col justify-around gap-10">
+          <div className="flex flex-col md:flex-row gap-[5%] justify-center items-center">
+            {events.map((event, index) => (
+              <GradientCard
+                key={index}
+                bordered
+                className="w-full md:max-w-60 text-center mb-[5%] md:mb-0">
+                <h2>
+                  {event.title
+                    .split(" ")
+                    .map((word, idx) =>
+                      event.neonWords.includes(word) ? (
+                        <span key={idx} className="neon">
+                          {word}
+                        </span>
+                      ) : (
+                        word
+                      )
+                    )
+                    .reduce((prev, curr) => [prev, " ", curr])}
+                </h2>
+              </GradientCard>
+            ))}
+          </div>
+          <motion.div variants={pulseAnimation()} animate="default">
+            <Button typeBtn="redirect">
+              <strong>Garanta seu ingresso</strong> para o proximo evento
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+    </>
   );
 };
 

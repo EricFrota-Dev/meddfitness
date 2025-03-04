@@ -1,33 +1,56 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { FaLongArrowAltRight } from "react-icons/fa";
+import { FaLongArrowAltRight, FaFileDownload } from "react-icons/fa";
+import { hoverAnimation } from "../../constants/animations";
 
 const Button = ({ children, typeBtn = "default" }) => {
-  const [hover, setHover] = useState("w-12");
+  const [hover, setHover] = useState(false);
   const modelos = {
-    default: "p-6 bg-gradient-to-t from-3 to-4",
+    default:
+      "p-6 bg-gradient-to-t from-3 to-4 rounded-full border-[1px] border-2",
     download:
-      "bg-6/10 before:h-full before:relative before:p-[2px] before:rounded-lg before:w-fit before:bg-gradient-to-r before:from-4 before:via-2 before:to-4 before:relactive",
-    redirect: "pl-6 pr-14 bg-6/10",
+      "relative p-[2px] rounded-lg bg-gradient-to-r from-4 w-full via-2 to-4",
+    redirect: "pl-6 pr-14 bg-6/10 rounded-full border-[1px] border-2",
   };
 
   return (
     <motion.button
-      className={`${modelos[typeBtn]} shadow-3 shadow-md cursor-pointer relative flex justify-between rounded-full items-center h-12 border-[1px] border-2 overflow-hidden`}
-      variants={{
-        initial: { scale: 1 },
-        hover: { scale: 1.05 },
-      }}
+      className={`${modelos[typeBtn]} cursor-pointer overflow-hidden h-12${
+        typeBtn !== "download"
+          ? " shadow-3 shadow-md relative flex m-auto justify-between items-center"
+          : ""
+      }`}
+      variants={hoverAnimation}
       whileHover="hover"
       whileTap={{ scale: 0.9 }}
       initial="initial"
       transition={{ duration: 0.5 }}
-      onHoverStart={() => setHover("w-full")}
-      onHoverEnd={() => setHover("w-12")}>
-      <h3 className="z-10">{children}</h3>
-      {typeBtn !== "default" && (
+      onHoverStart={() => setHover(true)}
+      onHoverEnd={() => setHover(false)}>
+      {typeBtn === "download" && (
+        <div className="bg-5 max-w-100 overflow-hidden pr-4 pl-14 rounded-lg border h-full flex items-center border-transparent bg-clip-padding">
+          <p
+            className={`${
+              hover && "text-5"
+            } transition-all duration-700 z-10 m-auto`}>
+            {children}
+          </p>
+          <div
+            className={`${
+              hover ? "scale-[2400%] bg-2" : "bg-2/60"
+            } absolute inset-0  h-8 w-8  transition-all duration-1000 top-2 left-4 
+           rounded-full`}></div>
+          <div className="text-5 absolute left-[25px]">
+            <FaFileDownload />
+          </div>
+        </div>
+      )}
+      {typeBtn !== "download" && <h3 className="z-10">{children}</h3>}
+      {typeBtn === "redirect" && (
         <div
-          className={`${hover} absolute transition-all duration-500 flex justify-end items-center top-0 right-0 h-full rounded-full bg-gradient-to-l from-2 to-4 px-4`}>
+          className={`${
+            hover ? "w-full" : "w-12"
+          } absolute transition-all duration-500 flex justify-end items-center top-0 right-0 h-full rounded-full bg-gradient-to-l from-2 to-4 px-4`}>
           <FaLongArrowAltRight className="text-5" />
         </div>
       )}

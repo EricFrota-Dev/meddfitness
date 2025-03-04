@@ -1,45 +1,94 @@
-export function entryMoveAnimation(delay = 0) {
+import { spring } from "motion";
+
+export const hoverAnimation = {
+  initial: { scale: 1 },
+  hover: { scale: 1.05 },
+};
+
+export const smooth = {
+  initial: { opacity: 0 },
+  default: { opacity: 1 },
+  transition: { duration: 0.3 },
+};
+
+export function entryAnimation(delay = 0) {
   return {
     default: {
       x: 0,
+      y: 0,
       opacity: 1,
       transition: {
         duration: 0.5,
         staggerChildren: 0.15,
         delay: delay,
-        ease: "easeInOut",
+        ease: "backOut",
       },
     },
     from_right: {
-      x: 300,
+      x: 100,
       opacity: 0,
       transition: {
         duration: 0.5,
         delay: delay,
-        ease: "easeInOut",
+        ease: "backOut",
       },
     },
     from_left: {
-      x: -300,
+      x: -100,
       opacity: 0,
       transition: {
         duration: 0.5,
         delay: delay,
-        ease: "easeInOut",
+        ease: "backOut",
       },
     },
 
     from_top: {
-      x: -300,
+      y: -100,
       opacity: 0,
       transition: {
         duration: 0.5,
         staggerChildren: 0.15,
         delay: delay,
-        ease: "easeInOut",
+        ease: "backOut",
       },
     },
 
+    from_bottom: {
+      y: 100,
+      opacity: 0,
+      transition: {
+        duration: 0.5,
+        staggerChildren: 0.15,
+        delay: delay,
+        ease: "backOut",
+      },
+    },
+  };
+}
+export function scaleBounceAnimation(delay = 0) {
+  return {
+    default: {
+      x: 0,
+      scale: 1,
+      opacity: 1,
+      transition: {
+        type: spring,
+        stiffness: 300,
+        damping: 15,
+        delay: delay,
+      },
+    },
+    small: {
+      scale: 0.5,
+      opacity: 0,
+      transition: {
+        type: spring,
+        stiffness: 200,
+        damping: 10,
+        delay: delay,
+      },
+    },
     from_bottom: {
       x: -300,
       opacity: 0,
@@ -47,82 +96,22 @@ export function entryMoveAnimation(delay = 0) {
         duration: 0.5,
         staggerChildren: 0.15,
         delay: delay,
-        ease: "easeInOut",
+        ease: "backOut",
       },
     },
   };
 }
-// export function entryScaleAnimation(delay = 0) {
-//     return {
-//       default: {
-//         x: 0,
-//         opacity: 1,
-//         transition: {
-//           duration: 0.5,
-//           staggerChildren: 0.15,
-//           delay: delay,
-//           ease: "easeInOut",
-//         },
-//       },
-//       w_initial: {
-//         width: "0%",
-//         transition: {
-//           duration: 0.5,
-//           staggerChildren: 0.15,
-//           delay: delay,
-//           ease: "easeInOut",
-//         },
-//       },
-
-//       2_exit: {
-//         x: 300,
-//         opacity: 0,
-//         transition: { duration: 0.5, delay: delay, ease: "easeInOut" },
-//       },
-//       l_initial: {
-//         x: -300,
-//         opacity: 0,
-//         transition: {
-//           duration: 0.5,
-//           staggerChildren: 0.15,
-//           delay: delay,
-//           ease: "easeInOut",
-//         },
-//       },
-//       l_exit: {
-//         x: -300,
-//         opacity: 0,
-//         transition: { duration: 0.5, delay: delay, ease: "easeInOut" },
-//       },
-//       t_initial: {
-//         x: -300,
-//         opacity: 0,
-//         transition: {
-//           duration: 0.5,
-//           staggerChildren: 0.15,
-//           delay: delay,
-//           ease: "easeInOut",
-//         },
-//       },
-//       t_exit: {
-//         x: -300,
-//         opacity: 0,
-//         transition: { duration: 0.5, delay: delay, ease: "easeInOut" },
-//       },
-//       b_initial: {
-//         x: -300,
-//         opacity: 0,
-//         transition: {
-//           duration: 0.5,
-//           staggerChildren: 0.15,
-//           delay: delay,
-//           ease: "easeInOut",
-//         },
-//       },
-//       b_exit: {
-//         x: -300,
-//         opacity: 0,
-//         transition: { duration: 0.5, delay: delay, ease: "easeInOut" },
-//       },
-//     };
-//   }
+export function pulseAnimation(delay = 0) {
+  return {
+    default: {
+      scale: [1, 1.02, 1],
+      opacity: [1, 0.8, 1],
+      transition: {
+        duration: 1,
+        repeat: Infinity,
+        ease: "easeInOut",
+        delay: delay,
+      },
+    },
+  };
+}

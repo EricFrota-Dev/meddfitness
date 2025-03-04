@@ -21,8 +21,8 @@ body {
   justify-content: space-between;
 }
 
-section {
-  padding: 0 6%;
+.customContainer {
+  padding: 36px 10%;
 }
 .neon {
   text-shadow: 0 0 5px #3ec1c9, 0 0 10px #3ec1c9;

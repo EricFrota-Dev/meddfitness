@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 
 const HamburgerMenu = ({ onClick, sidebarState }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  console.log("red");
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
@@ -35,7 +34,7 @@ const HamburgerMenu = ({ onClick, sidebarState }) => {
             closed: { rotate: 0, y: 0 },
             open: { rotate: 45, y: 6 },
           }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.3, ease: "backOut" }}
         />
         <motion.line
           x1="4"
@@ -47,7 +46,7 @@ const HamburgerMenu = ({ onClick, sidebarState }) => {
             closed: { opacity: 1 },
             open: { opacity: 0 },
           }}
-          transition={{ duration: 0.2 }}
+          transition={{ duration: 0.2, ease: "backOut" }}
         />
         <motion.line
           x1="4"
@@ -58,7 +57,7 @@ const HamburgerMenu = ({ onClick, sidebarState }) => {
             closed: { rotate: 0, y: 0 },
             open: { rotate: -45, y: -6 },
           }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.3, ease: "backOut" }}
         />
       </motion.svg>
     </button>

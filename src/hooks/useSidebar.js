@@ -6,9 +6,9 @@ const useSidebar = create((set) => ({
 
   toggle: () => set(({ isSidebarOpen }) => ({ isSidebarOpen: !isSidebarOpen })),
 
-  close: () => set(() => ({ isNavOppen: false })),
+  close: () => set(() => ({ isSidebarOpen: false })),
 
-  open: () => set(() => ({ isNavOppen: true })),
+  open: () => set(() => ({ isSidebarOpen: true })),
 }));
 
 export default useSidebar;

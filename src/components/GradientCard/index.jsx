@@ -14,7 +14,7 @@ const GradientCard = ({ children, bordered, className }) => {
       <div
         className={`${
           bordered ? "bg-5" : "radial-gradient"
-        } rounded-lg p-8 border border-transparent bg-clip-padding h-full flex justify-center items-center`}>
+        } rounded-lg p-8 border border-transparent bg-clip-padding h-full flex flex-col justify-center items-center `}>
         {children}
       </div>
     </motion.div>

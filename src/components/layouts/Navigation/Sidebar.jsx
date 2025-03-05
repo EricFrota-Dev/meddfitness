@@ -6,6 +6,7 @@ import HamburgerMenu from "./HamburgerMenu";
 const Sidebar = ({ onClick, sidebarState, children }) => {
   return (
     <>
+      <HamburgerMenu onClick={onClick} sidebarState={sidebarState} />
       <AnimatePresence>
         {sidebarState && (
           <motion.aside
@@ -18,7 +19,6 @@ const Sidebar = ({ onClick, sidebarState, children }) => {
           </motion.aside>
         )}
       </AnimatePresence>
-      <HamburgerMenu onClick={onClick} sidebarState={sidebarState} />
     </>
   );
 };

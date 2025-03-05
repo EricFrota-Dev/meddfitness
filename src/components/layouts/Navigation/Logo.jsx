@@ -9,7 +9,8 @@ const Logo = () => {
       <motion.div
         variants={entryAnimation()}
         initial="from_left"
-        animate="default">
+        animate="default"
+        className="-z-20">
         <Link to="/">
           <img className="h-[50px]" src={images[0].url} alt={images[0].name} />
         </Link>

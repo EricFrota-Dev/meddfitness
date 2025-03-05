@@ -1,7 +1,14 @@
 import BannerItem from "../../components/BannerCarousel/BannerItem";
 import GradientCard from "../../components/GradientCard";
 import PerfilCard from "../../components/PerfilCards";
-import { banners, images, stafPerfilPhotos } from "../../constants";
+import {
+  banners,
+  projetoMeddfitness,
+  images,
+  stafPerfilPhotos,
+} from "../../constants";
+import Logo from "../../components/layouts/Navigation/Logo";
+import EchoSysyemCarousel from "../../components/EchoSysyemCarousel";
 
 const Turma = () => {
   const cardsContent = [
@@ -53,7 +60,13 @@ const Turma = () => {
           <h1>COMISSÃO 2025</h1>
           <div className="flex flex-wrap md:flex-nowrap gap-2 md:gap-6 justify-around">
             {stafPerfilPhotos.map(({ src, name, role }) => (
-              <PerfilCard src={src} alt={name} name={name} role={role} />
+              <PerfilCard
+                src={src}
+                alt={name}
+                name={name}
+                role={role}
+                key={name}
+              />
             ))}
           </div>
         </div>
@@ -75,12 +88,104 @@ const Turma = () => {
             </h3>
           </div>
           <div className="text-2 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mt-18 mb-18 h-full">
-            {cardsContent.map((text) => (
+            {cardsContent.map((text, i) => (
               <GradientCard
                 bordered
+                key={i}
                 className="min-w-[130px] max-w-70 ml-auto mr-auto">
                 {text}
               </GradientCard>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="customContainer flex flex-col gap-10">
+          <div>
+            <h2 className="text-center ">
+              A <span>MEDDFITNESS ATUA EM DIVERSAS FRENTES</span>, conectando
+              profissionais, empresas e entidades do setor. Entre os principais
+              segmentos que fazem parte do nosso ecossistema, destacam-se:
+            </h2>
+          </div>
+          <div className="flex items-center justify-center">
+            <Logo />
+          </div>
+          <div className="md:flex">
+            <div className="p-6 flex items-center flex-3">
+              <h2 className="text-center md:text-end">
+                Somos um “centro de estudos” que coordenarmseis (6) Camara
+                Setoriais sendo; “NEGÓCIOS, MUSICA, MODA, ARTE, INTERNET e
+                FITNESS”, como trabalho social da empresa
+              </h2>
+            </div>
+            <div className="p-6 flex flex-1 items-center border-t-[2px] border-b-[2px] md:border-t-[0px] md:border-b-[0px] md:border-r-[2px] md:border-l-[2px] border-t-2 border-b-2  border-r-2 border-l-2">
+              <h2 className="text-center">
+                <span>MÚSICA ARTE MODA NEGÓCIOS MUNDO FITNESS EVENTO</span>
+              </h2>
+            </div>
+            <div className="p-6 flex items-center flex-3">
+              <h2 className="text-center md:text-start">
+                {" "}
+                Essas câmaras setoriais possibilitam a criação de projetos
+                sociais, capacitação profissional e oportunidades para novos
+                talentos, consolidando a MEDDFITNESS como um centro de estudos e
+                inovação no Brasil.
+              </h2>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="bg-2 text-5 text-center py-14 px-4 ">
+          <h1>APOSTAMOS NO INÉDITO. FAZEMOS O QUE NINGUÉM, FAZ!</h1>
+        </div>
+      </section>
+      <section id="ecosistema">
+        <div className="cusomContainer text-center">
+          <div className="my-10">
+            <p className="text-3xl font-bold">ECOSSISTEMA OPERACIONAL</p>
+          </div>
+          <div className="my-10">
+            <EchoSysyemCarousel />
+          </div>
+        </div>
+      </section>
+      <section id="ecentosRealizados">
+        <div className="bg-gradient-to-t from-3 to-4  text-1 text-center py-20 px-4">
+          <h1>Mais de 500 eventos realizados!</h1>
+        </div>
+      </section>
+      <section id="projetoMeddfitness">
+        <div className="customContainer">
+          <div>
+            <h2>
+              A <span>MEDDFITNESS</span> é um projeto inovador e dinâmico,
+              criado para transformar o cenário da medicina esportiva e do
+              fitness no Brasil, levando conhecimento, oportunidades e
+              experiências únicas para todos os envolvidos.
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 mt-10">
+            {projetoMeddfitness.map(({ title, desc, icon }, index) => (
+              <div key={index} className="flex items-center flex-col">
+                <div className="flex items-center justify-center mb-6 mt-6 md:mt-0">
+                  <img src={icon} alt={title} className="w-18 h-18" />
+                </div>
+
+                <GradientCard className="max-w-70 shadow-xl h-full">
+                  <div className="h-full">
+                    <div>
+                      <h2 className="mb-4">
+                        <span>{title}</span>
+                      </h2>
+                    </div>
+                    <div>
+                      <p>{desc}</p>
+                    </div>
+                  </div>
+                </GradientCard>
+              </div>
             ))}
           </div>
         </div>

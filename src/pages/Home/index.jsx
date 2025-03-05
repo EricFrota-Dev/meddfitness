@@ -66,7 +66,9 @@ const Home = () => {
             ))}
           </div>
           <motion.div variants={pulseAnimation()} animate="default">
-            <Button typeBtn="redirect">
+            <Button
+              typeBtn="redirect"
+              onClick={() => console.log('clicou em "Garanta seu ingresso"')}>
               <strong>Garanta seu ingresso</strong> para o proximo evento
             </Button>
           </motion.div>

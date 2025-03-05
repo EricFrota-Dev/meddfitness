@@ -15,6 +15,7 @@ import LeandroMoraes from "../assets/Images/perfilPhoto/LeandroMoraes_perfil.png
 import DianaMonteiro from "../assets/Images/perfilPhoto/DianaMonteiro_perfil.png";
 import BetaoMonteiro from "../assets/Images/perfilPhoto/BetaoMonteiro_perfil.png";
 import CassioBirque from "../assets/Images/perfilPhoto/CassioBirque_perfil.png";
+import defaultPerfilPhoto from "../assets/Images/perfilPhoto/default-perfil-icon.png";
 
 import network from "../assets/icons/network.png";
 import books from "../assets/icons/books.png";
@@ -30,6 +31,13 @@ import vivaCare from "../assets/logos/viva-care-logo.png";
 import universoCasuo from "../assets/logos/universo-casuo-logo.png";
 import rissi from "../assets/logos/rissi-logo.png";
 import linkedFun from "../assets/logos/linked-fun-logo.png";
+
+export const embaixadores = [
+  { id: 0, name: "XXX", src: defaultPerfilPhoto, role: " EM BREVE" },
+  { id: 1, name: "XXX", src: defaultPerfilPhoto, role: " EM BREVE" },
+  { id: 2, name: "XXX", src: defaultPerfilPhoto, role: " EM BREVE" },
+  { id: 3, name: "XXX", src: defaultPerfilPhoto, role: " EM BREVE" },
+];
 
 export const echosystem = [
   {
@@ -79,6 +87,32 @@ export const echosystem = [
     title: "LINKED FUN",
     desc: "Banco para Antecipação de recebíveis médicos.",
     logo: linkedFun,
+  },
+];
+export const palestrants = [
+  {
+    id: 0,
+    title: "NOME DO PALESTRANTE",
+    desc: "Tema que irá abordar e um breve resumo da sua especialidade.",
+    logo: defaultPerfilPhoto,
+  },
+  {
+    id: 1,
+    title: "NOME DO PALESTRANTE",
+    desc: "Tema que irá abordar e um breve resumo da sua especialidade.",
+    logo: defaultPerfilPhoto,
+  },
+  {
+    id: 2,
+    title: "NOME DO PALESTRANTE",
+    desc: "Tema que irá abordar e um breve resumo da sua especialidade.",
+    logo: defaultPerfilPhoto,
+  },
+  {
+    id: 3,
+    title: "NOME DO PALESTRANTE",
+    desc: "Tema que irá abordar e um breve resumo da sua especialidade.",
+    logo: defaultPerfilPhoto,
   },
 ];
 

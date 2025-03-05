@@ -1,9 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
 import { motion, useAnimation, useMotionValue } from "framer-motion";
 import EchoSysyemCard from "./EchoSysyemCard";
-import { echosystem } from "../../constants";
 
-const EchoSysyemCarousel = () => {
+const EchoSysyemCarousel = ({ items }) => {
   const controls = useAnimation();
   const containerRef = useRef < HTMLDivElement > null;
   const x = useMotionValue(0);
@@ -44,7 +43,7 @@ const EchoSysyemCarousel = () => {
         className="flex w-max gap-16"
         animate={controls}
         style={{ x }}>
-        {[...echosystem, ...echosystem].map(({ title, logo, desc }, index) => (
+        {[...items, ...items].map(({ title, logo, desc }, index) => (
           <EchoSysyemCard key={index} title={title} src={logo} desc={desc} />
         ))}
       </motion.div>

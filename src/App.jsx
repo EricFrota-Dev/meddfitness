@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Navegation />
-      <main className="pt-20">
+      <main className="pt-19">
         <Routes>
           <Route path={"/"} element={<Home />} />
           {navegation.map(({ url, element: Component }, i) => (

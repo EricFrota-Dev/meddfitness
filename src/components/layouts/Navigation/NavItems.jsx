@@ -28,7 +28,7 @@ const NavItems = () => {
               className={`${
                 isSidebarOpen
                   ? "bg-gradient-to-r from-2/50 to-5/0"
-                  : "bg-gradient-to-r from-3 via-2 to-4"
+                  : "bg-gradient-to-r from-3 via-2/50 to-4"
               } absolute inset-0 rounded-md z-[-1]`}
               initial={{ width: "0%" }}
               animate={{
@@ -37,7 +37,7 @@ const NavItems = () => {
               transition={{ duration: 0.3, ease: "easeInOut" }}
             />
 
-            {title}
+            <h3>{title}</h3>
           </NavLink>
         </motion.li>
       ))}

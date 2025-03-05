@@ -6,9 +6,12 @@ import {
   projetoMeddfitness,
   images,
   stafPerfilPhotos,
+  echosystem,
 } from "../../constants";
-import Logo from "../../components/layouts/Navigation/Logo";
+import exemplo from "../../assets/Images/exemplo.png";
 import EchoSysyemCarousel from "../../components/EchoSysyemCarousel";
+import { motion } from "motion/react";
+import { entryAnimation } from "../../constants/animations";
 
 const Turma = () => {
   const cardsContent = [
@@ -20,19 +23,27 @@ const Turma = () => {
 
   return (
     <>
-      <section>
+      <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
         <BannerItem src={banners[1].src} alt={banners[1].alt} />
-      </section>
+      </motion.section>
       <section>
         <div className="customContainer mt-10 mb-10 flex flex-col xl:flex-row gap-5 xl:gap-20">
-          <div className="flex-1 flex items-center">
+          <motion.div
+            className="flex-1 flex items-center"
+            variants={entryAnimation()}
+            initial="from_left"
+            whileInView="default">
             <img
               src={images[0].url}
               alt={images[0].name}
               className="w-full max-w-100"
             />
-          </div>
-          <div className="flex-2">
+          </motion.div>
+          <motion.div
+            className="flex-2"
+            variants={entryAnimation()}
+            initial="from_right"
+            whileInView="default">
             <p>
               {" "}
               A <span>MEDDFITNESS</span> nasceu para preencher uma lacuna
@@ -52,7 +63,7 @@ const Turma = () => {
               ciência, negócios e entretenimento, proporcionando experiências
               imersivas e impactantes para todos os participantes
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
       <section>
@@ -109,7 +120,7 @@ const Turma = () => {
             </h2>
           </div>
           <div className="flex items-center justify-center">
-            <Logo />
+            <img src={exemplo} alt="exemplo" />
           </div>
           <div className="md:flex">
             <div className="p-6 flex items-center flex-3">
@@ -147,7 +158,7 @@ const Turma = () => {
             <p className="text-3xl font-bold">ECOSSISTEMA OPERACIONAL</p>
           </div>
           <div className="my-10">
-            <EchoSysyemCarousel />
+            <EchoSysyemCarousel items={echosystem} />
           </div>
         </div>
       </section>

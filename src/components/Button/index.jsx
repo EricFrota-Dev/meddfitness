@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FaLongArrowAltRight, FaFileDownload } from "react-icons/fa";
 import { hoverAnimation } from "../../constants/animations";
 
-const Button = ({ children, typeBtn = "default" }) => {
+const Button = ({ children, typeBtn = "default", onClick }) => {
   const [hover, setHover] = useState(false);
   const modelos = {
     default:
@@ -15,7 +15,7 @@ const Button = ({ children, typeBtn = "default" }) => {
 
   return (
     <motion.button
-      className={`${modelos[typeBtn]} cursor-pointer overflow-hidden h-12${
+      className={`${modelos[typeBtn]} cursor-pointer overflow-hidden min-h-12${
         typeBtn !== "download"
           ? " shadow-3 shadow-md relative flex m-auto justify-between items-center"
           : ""
@@ -26,7 +26,8 @@ const Button = ({ children, typeBtn = "default" }) => {
       initial="initial"
       transition={{ duration: 0.5 }}
       onHoverStart={() => setHover(true)}
-      onHoverEnd={() => setHover(false)}>
+      onHoverEnd={() => setHover(false)}
+      onClick={onClick}>
       {typeBtn === "download" && (
         <div className="bg-5 max-w-100 overflow-hidden pr-4 pl-14 rounded-lg border h-full flex items-center border-transparent bg-clip-padding">
           <p

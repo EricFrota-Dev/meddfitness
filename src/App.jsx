@@ -10,7 +10,7 @@ function App() {
       <Navegation />
       <main className="pt-17 md:pt-21">
         <Routes>
-          <Route path={"/"} element={<Home />} />
+          <Route path={"/meddfitness/"} element={<Home />} />
           {navegation.map(({ url, element: Component }, i) => (
             <Route key={i} path={url} element={<Component />} />
           ))}

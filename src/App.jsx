@@ -1,20 +1,13 @@
 import Navegation from "./components/layouts/Navigation";
 import Footer from "./components/layouts/Footer";
-import { Route, Routes } from "react-router-dom";
-import { navegation } from "./constants";
-import Home from "./pages/Home";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <>
       <Navegation />
       <main className="pt-17 md:pt-21">
-        <Routes>
-          <Route path={"/meddfitness/"} element={<Home />} />
-          {navegation.map(({ url, element: Component }, i) => (
-            <Route key={i} path={url} element={<Component />} />
-          ))}
-        </Routes>
+        <Outlet />
       </main>
       <Footer />
     </>

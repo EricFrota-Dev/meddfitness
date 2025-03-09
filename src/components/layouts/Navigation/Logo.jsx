@@ -11,7 +11,7 @@ const Logo = () => {
         initial="from_left"
         animate="default"
         className="-z-20">
-        <Link to="/">
+        <Link to="/meddfitness/">
           <img className="h-[50px]" src={images[0].url} alt={images[0].name} />
         </Link>
       </motion.div>

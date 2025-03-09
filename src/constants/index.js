@@ -376,42 +376,42 @@ export const navegation = [
     url: "/meddfitness/meddfittnes_2025",
     element: MeddFitness2025,
   },
-  {
-    id: "3",
-    title: "IFBB ACADEMY",
-    url: "/meddfitness/ifbb_academy",
-    element: IfbbAcademy,
-  },
-  {
-    id: "4",
-    title: "IFBB PRO",
-    url: "/meddfitness/ifbb_pro",
-    element: IfbbPro,
-  },
-  {
-    id: "5",
-    title: "IFBB BRASIL STORE",
-    url: "/meddfitness/ifbb_brasil_store",
-    element: IfbbBrasil,
-  },
+  // {
+  //   id: "3",
+  //   title: "IFBB ACADEMY",
+  //   url: "/meddfitness/ifbb_academy",
+  //   element: IfbbAcademy,
+  // },
+  // {
+  //   id: "4",
+  //   title: "IFBB PRO",
+  //   url: "/meddfitness/ifbb_pro",
+  //   element: IfbbPro,
+  // },
+  // {
+  //   id: "5",
+  //   title: "IFBB BRASIL STORE",
+  //   url: "/meddfitness/ifbb_brasil_store",
+  //   element: IfbbBrasil,
+  // },
   {
     id: "6",
     title: "GAROTA MEGAFITNESS",
     url: "/meddfitness/garota_megafittnes",
     element: GarotaMegaFitness,
   },
-  {
-    id: "7",
-    title: "PODCAST MAROMBA",
-    url: "/meddfitness/podcast_maromba",
-    element: PodcastMaromba,
-  },
-  {
-    id: "8",
-    title: "GUIA",
-    url: "/meddfitness/guia",
-    element: GuiaDoSite,
-  },
+  // {
+  //   id: "7",
+  //   title: "PODCAST MAROMBA",
+  //   url: "/meddfitness/podcast_maromba",
+  //   element: PodcastMaromba,
+  // },
+  // {
+  //   id: "8",
+  //   title: "GUIA",
+  //   url: "/meddfitness/guia",
+  //   element: GuiaDoSite,
+  // },
 ];
 export const images = [
   {

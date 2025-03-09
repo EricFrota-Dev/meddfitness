@@ -1,5 +1,4 @@
 // IMPORTS #############################################
-
 import Turma from "../pages/Turma";
 import GarotaMegaFitness from "../pages/GarotaMegaFitness";
 import IfbbAcademy from "../pages/IfbbAcademy";
@@ -63,6 +62,28 @@ import {
 } from "../assets/Images/categorias";
 
 // LISTIS #############################################
+
+import CarnavalDaIvete from "../assets/Images/events/CarnavalDaIvete.png";
+import EventoMissFit from "../assets/Images/events/EventoMissFit.png";
+import MundoPsychodelico from "../assets/Images/events/MundoPsychodelico.png";
+
+export const events = [
+  {
+    id: 0,
+    src: CarnavalDaIvete,
+    name: "Carnaval da Ivete",
+  },
+  {
+    id: 1,
+    src: EventoMissFit,
+    name: "Evento MissFit",
+  },
+  {
+    id: 2,
+    src: MundoPsychodelico,
+    name: "Mundo Psychodelico",
+  },
+];
 
 export const premiacoes = [
   {

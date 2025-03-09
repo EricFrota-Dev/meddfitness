@@ -14,7 +14,7 @@ const index = ({ title, subTitle, desc, images, isLeft }) => {
       whileInView="default">
       <div
         className={`mb-4 xl:max-w-70 mx-auto xl:mx-6 ${
-          isLeft ? "order-1" : "order-2"
+          isLeft ? "xl:order-1" : "xl:order-2"
         }`}>
         <h1>
           <span>{title}</span>
@@ -28,7 +28,7 @@ const index = ({ title, subTitle, desc, images, isLeft }) => {
       </div>
       <div
         className={`w-full xl:w-fit flex justify-center gap-6 ${
-          isLeft ? "order-2" : "order-1"
+          isLeft ? "xl:order-2" : "xl:order-1"
         }`}>
         <div
           className={`overflow-hidden rounded-xl max-w-70 max-h-70 ${

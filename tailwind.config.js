@@ -28,6 +28,7 @@ module.exports = {
         h1: {
           fontSize: "1.5rem",
           fontWeight: "700",
+          
         },
         h2: {
           fontSize: "1.25rem",

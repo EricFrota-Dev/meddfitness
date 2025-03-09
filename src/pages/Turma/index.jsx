@@ -143,11 +143,11 @@ const Turma = () => {
       </section>
       <section>
         <motion.div
-          className="bg-gradient-to-r from-4 via-2 to-4 text-5 text-center py-14 px-4 "
+          className=" bg-2 text-5 text-center py-14 px-4 "
           variants={entryAnimation()}
           initial="from_left"
           whileInView="default">
-          <h1>APOSTAMOS NO INÉDITO. FAZEMOS O QUE NINGUÉM, FAZ!</h1>
+          <h1>APOSTAMOS NO INÉDITO. FAZEMOS O QUE NINGUÉM FAZ!</h1>
         </motion.div>
       </section>
       <section id="ecosistema">

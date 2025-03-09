@@ -1,3 +1,5 @@
+// IMPORTS #############################################
+
 import Turma from "../pages/Turma";
 import GarotaMegaFitness from "../pages/GarotaMegaFitness";
 import IfbbAcademy from "../pages/IfbbAcademy";
@@ -7,32 +9,190 @@ import MeddEventos from "../pages/MeddEventos";
 import MeddFitness2025 from "../pages/MeddFitness2025";
 import PodcastMaromba from "../pages/PodcastMaromba";
 import GuiaDoSite from "../pages/GuiaDoSite";
-import banner1 from "../assets/Images/banners/banner1.jpg";
-import banner2 from "../assets/Images/banners/banner2.png";
-import banner3 from "../assets/Images/banners/banner3.png";
-import PauloNetto from "../assets/Images/perfilPhoto/PauloNetto_perfil.png";
-import LeandroMoraes from "../assets/Images/perfilPhoto/LeandroMoraes_perfil.png";
-import DianaMonteiro from "../assets/Images/perfilPhoto/DianaMonteiro_perfil.png";
-import BetaoMonteiro from "../assets/Images/perfilPhoto/BetaoMonteiro_perfil.png";
-import CassioBirque from "../assets/Images/perfilPhoto/CassioBirque_perfil.png";
-import defaultPerfilPhoto from "../assets/Images/perfilPhoto/default-perfil-icon.png";
 
-import network from "../assets/icons/network.png";
-import books from "../assets/icons/books.png";
-import hands from "../assets/icons/hands.png";
-import instruments from "../assets/icons/instruments.png";
+import {
+  PauloNetto,
+  LeandroMoraes,
+  DianaMonteiro,
+  BetaoMonteiro,
+  CassioBirque,
+  defaultPerfilPhoto,
+} from "../assets/Images/perfilPhoto";
 
-import Logo from "../assets/logos/meddfitness-logo.svg";
-import anadem from "../assets/logos/anadem-logo.png";
-import megafitness from "../assets/logos/megafitness-logo.png";
-import ifbbBrasil from "../assets/logos/ifbb-brasil-logo.png";
-import ifbbAcademy from "../assets/logos/ifbb-academy-logo.png";
-import vivaCare from "../assets/logos/viva-care-logo.png";
-import universoCasuo from "../assets/logos/universo-casuo-logo.png";
-import rissi from "../assets/logos/rissi-logo.png";
-import linkedFun from "../assets/logos/linked-fun-logo.png";
+import { network, books, hands, instruments } from "../assets/icons";
+
+import {
+  Logo,
+  anadem,
+  megafitness,
+  ifbbBrasil,
+  ifbbAcademy,
+  vivaCare,
+  universoCasuo,
+  rissi,
+  linkedFun,
+} from "../assets/logos";
+
+import { banner1, banner2, banner3 } from "../assets/Images/banners";
+
+import {
+  casuoAtraction1,
+  casuoAtraction2,
+  anatoly1,
+  anatoly2,
+  stevenSagal1,
+  stevenSagal2,
+  zeNetoCristiano1,
+  zeNetoCristiano2,
+} from "../assets/Images/atractions";
+import {
+  academias,
+  boxCrossfit,
+  yoga,
+  pilates,
+  clubeExportivo,
+} from "../assets/Images/parceiros";
+
+import {
+  bikiniFitFem01,
+  bikiniFitFem02,
+  bodyFitFem01,
+  bodyFitFem02,
+  fitFem01,
+  fitFem02,
+} from "../assets/Images/categorias";
+
+// LISTIS #############################################
+
+export const premiacoes = [
+  {
+    id: 0,
+    title: "1º-Colocado por categoria",
+    topics: [
+      "Troféu IFBB – Medalha, faixa e flores",
+      "Book fotográfico por agência de modelos",
+      "Produtos cosméticos/suplementos",
+      "Contrato de publicidade no valor de R$ 10.000,00",
+    ],
+  },
+  {
+    id: 1,
+    title: "2º Colocado por Categoria",
+    topics: [
+      "Troféu IFBB – Medalha, faixa e flores",
+      "Book fotográfico por agência de modelos",
+      "Produtos cosméticos/ suplementos",
+      "Contrato de publicidade no valor de R$ 5.000,00",
+    ],
+  },
+  {
+    id: 2,
+    title: "3º Colocado por Categoria",
+    topics: [
+      "Troféu IFBB – Medalha, faixa e flores",
+      "Book fotográfico por agência de modelos",
+      "Produtos Belifit/ cosméticos/suplementos",
+      "Contrato de publicidade no valor de R$ 3.000,00",
+    ],
+  },
+  {
+    id: 3,
+    title: "4º a 6º Colocado por Categoria",
+    topics: [
+      "Troféu IFBB – Medalha e flores",
+      "Produtos Belifit/ cosméticos/suplementos",
+      "Prêmio em dinheiro no valor de R$ 1.000,00",
+    ],
+  },
+];
+
+export const categorias = [
+  {
+    id: 0,
+    title: "FITNESS FEMININO",
+    desc: "Este conceito foi introduzido pela IFBB no início dos anos 90, começando como competição oficial em 1996 em resposta à crescente demanda por competições para mulheres que preferem desenvolver um físico menos musculoso, mas atlético e esteticamente agradável e também mostrar seus físicos em movimento",
+    images: [bikiniFitFem01, bikiniFitFem02],
+  },
+  {
+    id: 1,
+    title: "FITNESS FEMININO",
+    desc: "Este conceito foi introduzido pela IFBB no início dos anos 90, começando como competição oficial em 1996 em resposta à crescente demanda por competições para mulheres que preferem desenvolver um físico menos musculoso, mas atlético e esteticamente agradável e também mostrar seus físicos em movimento",
+    images: [bodyFitFem01, bodyFitFem02],
+  },
+  {
+    id: 2,
+    title: "FITNESS FEMININO",
+    desc: "Este conceito foi introduzido pela IFBB no início dos anos 90, começando como competição oficial em 1996 em resposta à crescente demanda por competições para mulheres que preferem desenvolver um físico menos musculoso, mas atlético e esteticamente agradável e também mostrar seus físicos em movimento",
+    images: [fitFem01, fitFem02],
+  },
+];
+
+export const parceiros = [
+  {
+    id: 0,
+    name: "ACADEMIAS",
+    src: academias,
+  },
+  {
+    id: 1,
+    name: "BOX DE CROSSFIT",
+    src: boxCrossfit,
+  },
+  {
+    id: 2,
+    name: "STUDIO DE YOGA",
+    src: yoga,
+  },
+  {
+    id: 3,
+    name: "PSTUDIO DE PILATES",
+    src: pilates,
+  },
+  {
+    id: 4,
+    name: "CLUBES ESPORTIVOS",
+    src: clubeExportivo,
+  },
+];
+
+export const atractions = [
+  {
+    id: 0,
+    subTitle: "UNIVERSO CASUO",
+    title: "CIRQUE DU SOLEIL",
+    desc: "Espetáculo artístico criado por Marcos Casuo, ex-integrante do Cirque du Soleil, unindo música, performance e acrobacias em um show único e vibrante.",
+    images: [casuoAtraction1, casuoAtraction2],
+  },
+  {
+    id: 1,
+    title: "ANATOLY",
+    subTitle: "VLADIMIR SHMONDENKO",
+    desc: "Atleta de fisiculturismo de renome internacional, referência em treinamento de alto rendimento e desenvolvimento muscular extremo.",
+    images: [anatoly1, anatoly2],
+  },
+  {
+    id: 2,
+    title: "STEVEN SEAGAL",
+    subTitle: "ATOR",
+    desc: "Ator, mestre em artes marciais e ícone dos filmes de ação, conhecido por sua destreza no Aikido e por sua carreira no cinema de Hollywood.",
+    images: [stevenSagal1, stevenSagal2],
+  },
+  {
+    id: 3,
+    title: "ZÉ NETO E CRISTIANO",
+    subTitle: "CANTOR SERTAJEJO",
+    desc: "Uma das duplas sertanejas mais populares do Brasil, conhecida por seus sucessos românticos e animados que conquistam multidões.",
+    images: [zeNetoCristiano1, zeNetoCristiano2],
+  },
+];
 
 export const embaixadores = [
+  { id: 0, name: "XXX", src: defaultPerfilPhoto, role: " EM BREVE" },
+  { id: 1, name: "XXX", src: defaultPerfilPhoto, role: " EM BREVE" },
+  { id: 2, name: "XXX", src: defaultPerfilPhoto, role: " EM BREVE" },
+  { id: 3, name: "XXX", src: defaultPerfilPhoto, role: " EM BREVE" },
+];
+export const patrocinadores = [
   { id: 0, name: "XXX", src: defaultPerfilPhoto, role: " EM BREVE" },
   { id: 1, name: "XXX", src: defaultPerfilPhoto, role: " EM BREVE" },
   { id: 2, name: "XXX", src: defaultPerfilPhoto, role: " EM BREVE" },
@@ -246,8 +406,45 @@ export const banners = [
   { id: 3, src: banner3, alt: "Banner 3" },
 ];
 
+export const ingressosCard = [
+  { title: "Workshop de medicina Esportiva", neonWords: ["Workshop", "de"] },
+  {
+    title: "MegaFitness: O maior concurso fitness do Brasil",
+    neonWords: ["MegaFitness:"],
+  },
+  {
+    title: "Campeonato de Fisiculturismo com a IFBB",
+    neonWords: ["Fisiculturismo"],
+  },
+];
 export const ingressos = [
-  { id: 1, text: "WorkShop de Medicina Esportiva" },
-  { id: 2, text: "MegaFitness: O maior concurso fitness do Brasil" },
-  { id: 3, text: "Campeonato de Fisiculturismo com a IFBB" },
+  {
+    id: 0,
+    title: "MEDDPOWER ",
+    descs: [
+      "2 dias de evento em cadeiras exclusivas em frente ao palco, ao lado das celebridades.",
+      "Melhor visão do evento, com conforto e status VIP.",
+    ],
+    redirect: "#",
+    value: 997,
+  },
+  {
+    id: 1,
+    title: "MEDDPRO",
+    descs: [
+      "2 dias de eventos Para quem busca conforto e exclusividade.",
+      "Cadeiras mais próximas ao palco.",
+    ],
+    redirect: "#",
+    value: 997,
+  },
+  {
+    id: 2,
+    title: "MEDDFIT",
+    descs: [
+      "2 dias de evento, com assento nas arquibancadas, garantindo uma visão ampla do espetáculo.",
+    ],
+    redirect: "#",
+    value: 997,
+  },
 ];

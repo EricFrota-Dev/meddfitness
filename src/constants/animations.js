@@ -1,7 +1,7 @@
 import { spring } from "motion";
 
 export const hoverAnimation = {
-  initial: { scale: 1 },
+  initial: { scale: 1, opacity: 1 },
   hover: { scale: 1.05 },
 };
 

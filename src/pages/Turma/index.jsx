@@ -71,13 +71,7 @@ const Turma = () => {
           <h1>COMISSÃO 2025</h1>
           <div className="flex flex-wrap md:flex-nowrap gap-2 md:gap-6 justify-around">
             {stafPerfilPhotos.map(({ src, name, role }) => (
-              <PerfilCard
-                src={src}
-                alt={name}
-                name={name}
-                role={role}
-                key={name}
-              />
+              <PerfilCard src={src} name={name} role={role} key={name} />
             ))}
           </div>
         </div>
@@ -148,9 +142,13 @@ const Turma = () => {
         </div>
       </section>
       <section>
-        <div className="bg-2 text-5 text-center py-14 px-4 ">
+        <motion.div
+          className="bg-gradient-to-r from-4 via-2 to-4 text-5 text-center py-14 px-4 "
+          variants={entryAnimation()}
+          initial="from_left"
+          whileInView="default">
           <h1>APOSTAMOS NO INÉDITO. FAZEMOS O QUE NINGUÉM, FAZ!</h1>
-        </div>
+        </motion.div>
       </section>
       <section id="ecosistema">
         <div className="cusomContainer text-center">
@@ -163,9 +161,13 @@ const Turma = () => {
         </div>
       </section>
       <section id="ecentosRealizados">
-        <div className="bg-gradient-to-t from-3 to-4  text-1 text-center py-20 px-4">
+        <motion.div
+          className="bg-gradient-to-t from-3 to-4  text-1 text-center py-20 px-4"
+          variants={entryAnimation()}
+          initial="from_right"
+          whileInView="default">
           <h1>Mais de 500 eventos realizados!</h1>
-        </div>
+        </motion.div>
       </section>
       <section id="projetoMeddfitness">
         <div className="customContainer">

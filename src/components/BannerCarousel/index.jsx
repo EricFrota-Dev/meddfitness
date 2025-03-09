@@ -44,8 +44,8 @@ const BannerCarousel = () => {
         {banners.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full ${
-              currentIndex === index ? "bg-blue-500" : "bg-gray-300"
+            className={`w-3 h-3 border-[1px] border-1 rounded-full ${
+              currentIndex === index ? "bg-1" : "bg-2/30"
             }`}
             onClick={() => handleClick(index)}
           />

@@ -3,20 +3,9 @@ import Button from "../../components/Button";
 import GradientCard from "../../components/GradientCard";
 import { motion } from "motion/react";
 import { entryAnimation, pulseAnimation } from "../../constants/animations";
-import { h2 } from "motion/react-client";
+import { ingressosCard } from "../../constants";
 
 const Home = () => {
-  const events = [
-    { title: "Workshop de medicina Esportiva", neonWords: ["Workshop", "de"] },
-    {
-      title: "MegaFitness: O maior concurso fitness do Brasil",
-      neonWords: ["MegaFitness:"],
-    },
-    {
-      title: "Campeonato de Fisiculturismo com a IFBB",
-      neonWords: ["Fisiculturismo"],
-    },
-  ];
   return (
     <>
       <section id="banners">
@@ -43,7 +32,7 @@ const Home = () => {
       <section id="events">
         <div className="customContainer flex flex-col justify-around gap-10">
           <div className="flex flex-col md:flex-row gap-[5%] justify-center items-center">
-            {events.map((event, index) => (
+            {ingressosCard.map((event, index) => (
               <GradientCard
                 key={index}
                 bordered
@@ -65,7 +54,10 @@ const Home = () => {
               </GradientCard>
             ))}
           </div>
-          <motion.div variants={pulseAnimation()} animate="default">
+          <motion.div
+            variants={pulseAnimation()}
+            animate="default"
+            className="flex justify-center">
             <Button
               typeBtn="redirect"
               onClick={() => console.log('clicou em "Garanta seu ingresso"')}>

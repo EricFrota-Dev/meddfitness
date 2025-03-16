@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-primary: "Poppins", sans-serif;
+  --color-1: #ffffff;
+  --color-2: #3ec1c9;
+  --color-3: #1a3d47;
+  --color-4: #142731;
+  --color-5: #0e121c;
+  --color-6: #000000;
+}
+:root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-x: hidden;
+  font-family: var(--font-primary);
+  color: var(--color-1);
+  background-color: var(--color-5);
+  font-weight: 200;
+}
+
+span {
+  color: var(--color-2);
+}
+
+.neon {
+  text-shadow: 0 0 5px var(--color-2), 0 0 10px var(--color-2);
+}
+section {
+  border-top: 1px solid #0d171d;
+  border-bottom: 1px solid #0d171d;
+}
+.customContainer {
+  padding: 36px 10%;
+  width: 100vw;
+}
+.radial-gradient {
+  background-image: radial-gradient(
+    farthest-corner at 0px 0px,
+    #142731 0%,
+    #1a3d47 50%,
+    #142731 100%
+  );
+}
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+h3 {
+  font-size: 1rem;
+  font-weight: 300;
+}

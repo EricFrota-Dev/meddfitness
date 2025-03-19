@@ -18,3 +18,9 @@ export type simpleCard = {
   src: string;
   desc?: string;
 };
+
+export type articleContent = {
+  id: number;
+  title: string;
+  content: string;
+};

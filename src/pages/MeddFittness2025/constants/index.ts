@@ -1,3 +1,4 @@
+import { articleContent } from "@/constants/types";
 import { FAQsProps } from "../types";
 
 export const duvidasRespostas01: FAQsProps[] = [
@@ -57,5 +58,34 @@ export const duvidasRespostas02: FAQsProps[] = [
     id: 4,
     question: "Quero sugerir ou ser um palestrante, como faço?",
     response: "Entre em contato pelo nosso site e envie sua proposta.",
+  },
+];
+export const voluntiers: articleContent[] = [
+  {
+    id: 1,
+    title: "SEJA UM VOLUNTÁRIO",
+    content:
+      "Faça parte da organização do maior evento de fitness e bem-estar da América Latina. Participe como monitor voluntário do MEDDFITNESS 2025, entre os dias 25 e 26 de julho, no centro regional de eventos, em Rio Preto (SP)",
+  },
+  {
+    id: 2,
+    title: "PAINEL NOVOS TALENTOS",
+    content:
+      "Quer subir no palco da MEDDFit 2025? Inscreva-se para o processo seletivo de novos palestrantes no Painel de Novos Talentos.",
+  },
+];
+
+export const dailyTickets: articleContent[] = [
+  {
+    id: 1,
+    title: "INGRESSO DIÁRIO",
+    content:
+      "Empresa STARTUP de entretenimento criada em 2022 com o objetivo de desplugar do mercado convencional de entretenimento.",
+  },
+  {
+    id: 2,
+    title: "INGRESSO DIÁRIO",
+    content:
+      "A Federação Internacional de Culturismo e Fitness (IFBB) possui 204 nações afiliadas e é reconhecida por mais de 90 federações esportivas mundiais. Com foco no esporte amador em todo o mundo, a IFBB representa a máxima expectativa de desenvolvimento físico muscular humano em harmonia saudável.",
   },
 ];

@@ -49,11 +49,8 @@ import {
 } from "@/assets/images/logos";
 import { books, hands, instruments, network } from "@/assets/icons";
 import { banner1, banner2, banner3 } from "@/assets/images/banners";
-import Turma from "@/pages/Turma";
 import { simpleCard } from "./types";
-import MeddEventos from "@/pages/MeddEventos";
-import MeddFitness2025 from "@/pages/MeddFittness2025";
-import GarotaMegaFitness from "@/pages/GarotaMegaFitness";
+import { lazy } from "react";
 
 // LISTIS #############################################
 
@@ -352,19 +349,19 @@ export const navegation = [
     id: "0",
     title: "TURMA",
     url: "/meddfitness/turma",
-    element: Turma,
+    element: lazy(() => import("@/pages/Turma")),
   },
   {
     id: "1",
     title: "MEDDEVENTOS",
     url: "/meddfitness/medd_eventos",
-    element: MeddEventos,
+    element: lazy(() => import("@/pages/MeddEventos")),
   },
   {
     id: "2",
     title: "MEDDFITNESS 2025",
     url: "/meddfitness/meddfittnes_2025",
-    element: MeddFitness2025,
+    element: lazy(() => import("@/pages/MeddFittness2025")),
   },
   // {
   //   id: "3",
@@ -388,7 +385,7 @@ export const navegation = [
     id: "6",
     title: "GAROTA MEGAFITNESS",
     url: "/meddfitness/garota_megafittnes",
-    element: GarotaMegaFitness,
+    element: lazy(() => import("@/pages/GarotaMegaFitness")),
   },
   // {
   //   id: "7",

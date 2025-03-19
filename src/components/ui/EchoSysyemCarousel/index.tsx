@@ -12,11 +12,12 @@ const EchoSysyemCarousel: React.FC<echoSysyemCardProps> = ({ items }) => {
   const startAnimation = (fromX = 0) => {
     x.set(fromX);
     controls.start({
-      x: [fromX, "-100%"],
+      x: [fromX, "-50%"],
       transition: {
         ease: "linear",
         duration: 100,
         repeat: Infinity,
+        repeatType: "loop",
       },
     });
   };
@@ -45,7 +46,7 @@ const EchoSysyemCarousel: React.FC<echoSysyemCardProps> = ({ items }) => {
         className="flex w-max gap-16"
         animate={controls}
         style={{ x }}>
-        {[...items, ...items].map(({ title, src, desc }, index) => (
+        {items.concat(items).map(({ title, src, desc }, index) => (
           <EchoSysyemCard key={index} title={title} src={src} desc={desc} />
         ))}
       </motion.div>

@@ -8,9 +8,9 @@ import {
   fitFem02,
 } from "@/assets/images/categorias";
 
-import CarnavalDaIvete from "../assets/Images/events/CarnavalDaIvete.jpg";
-import EventoMissFit from "../assets/Images/events/EventoMissFit.jpg";
-import MundoPsychodelico from "../assets/Images/events/MundoPsychodelico.jpg";
+import CarnavalDaIvete from "@/assets/images/events/CarnavalDaIvete.jpg";
+import EventoMissFit from "@/assets/images/events/EventoMissFit.jpg";
+import MundoPsychodelico from "@/assets/images/events/MundoPsychodelico.jpg";
 import {
   BetaoMonteiro,
   CassioBirque,

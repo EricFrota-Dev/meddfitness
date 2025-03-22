@@ -2,6 +2,11 @@ export type imagesProps = {
   src: string;
   alt: string;
 };
+export type simpleImage = {
+  id: number;
+  src: string;
+  alt: string;
+};
 
 export type childrenProps = {
   children: React.ReactNode;

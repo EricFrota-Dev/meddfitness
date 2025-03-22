@@ -16,7 +16,7 @@ const Button: React.FC<btnProps> = ({
       "p-6 bg-gradient-to-t from-3 to-4 rounded-full border-[1px] border-2",
     download:
       "relative w-full max-w-120 p-[2px] rounded-lg bg-gradient-to-r from-4 via-2 to-4",
-    redirect: "pl-6 pr-14 bg-4 rounded-full border-[1px] border-2",
+    redirect: "pl-6 pr-14 py-2 bg-4 rounded-full border-[1px] border-2",
   };
 
   return (

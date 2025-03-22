@@ -8,10 +8,10 @@ const Passport = () => {
       <h1 className="text-center mb-10">
         PASSAPORTE COM ACESSO À DIVERSOS CONTEÚDOS
       </h1>
-      <div className="flex gap-10 relative justify-center">
+      <div className="flex w-full items-center md:items-stretch flex-col md:flex-row gap-10 justify-center">
         {ingressos.map(({ title, descs, value, redirect }, i) => (
           <GradientCard bordered key={i} className="flex-1 max-w-70">
-            <div className="h-full flex flex-col justify-between">
+            <div className="h-full flex flex-col relative justify-between">
               <h1 className="text-center">
                 <span>{title}</span>
               </h1>
@@ -28,15 +28,15 @@ const Passport = () => {
                   }).format(value)}
                 </strong>
               </p>
-            </div>
-            <div className="absolute -bottom-6">
-              <Button
-                typeBtn="redirect"
-                onClick={() => {
-                  window.open(redirect);
-                }}>
-                Compar Agora
-              </Button>
+              <div className="absolute -bottom-14">
+                <Button
+                  typeBtn="redirect"
+                  onClick={() => {
+                    window.open(redirect);
+                  }}>
+                  Compar Agora
+                </Button>
+              </div>
             </div>
           </GradientCard>
         ))}

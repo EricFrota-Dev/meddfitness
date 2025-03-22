@@ -14,7 +14,9 @@ const GarantirEngressoBtn: React.FC<GarantirEngressoBtnProps> = ({
       <Button
         typeBtn="redirect"
         onClick={() => console.log('clicou em "GARANTIR O MEU INGRESSO"')}>
-        <strong className="mx-15">GARANTIR O MEU INGRESSO</strong>
+        <p>
+          <strong className="text-center">GARANTIR O MEU INGRESSO</strong>
+        </p>
       </Button>
     </motion.div>
   );

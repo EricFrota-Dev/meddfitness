@@ -9,7 +9,7 @@ const Volunteer = () => {
       <div className="flex justify-center gap-10 flex-wrap">
         {voluntiers.map(({ title, content }, i) => (
           <GradientCard bordered className="max-w-80" key={i}>
-            <div className="flex flex-col justify-between">
+            <div className="flex flex-col h-full justify-between">
               <h1>
                 <span>{title}</span>
               </h1>

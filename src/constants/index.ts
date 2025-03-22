@@ -49,7 +49,7 @@ import {
 } from "@/assets/images/logos";
 import { books, hands, instruments, network } from "@/assets/icons";
 import { banner1, banner2, banner3 } from "@/assets/images/banners";
-import { simpleCard } from "./types";
+import { simpleCard, simpleImage } from "./types";
 import { lazy } from "react";
 
 // LISTIS #############################################
@@ -408,7 +408,7 @@ export const images = [
   },
 ];
 
-export const banners = [
+export const banners: simpleImage[] = [
   { id: 1, src: banner1, alt: "Banner 1" },
   { id: 2, src: banner2, alt: "Banner 2" },
   { id: 3, src: banner3, alt: "Banner 3" },
@@ -444,7 +444,7 @@ export const ingressos = [
       "Cadeiras mais próximas ao palco.",
     ],
     redirect: "#",
-    value: 997,
+    value: 497,
   },
   {
     id: 2,
@@ -453,6 +453,6 @@ export const ingressos = [
       "2 dias de evento, com assento nas arquibancadas, garantindo uma visão ampla do espetáculo.",
     ],
     redirect: "#",
-    value: 997,
+    value: 297,
   },
 ];

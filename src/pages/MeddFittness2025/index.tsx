@@ -72,7 +72,7 @@ const MeddFitness2025 = () => {
       <section>
         <Speakers />
       </section>
-      <section id="localDoEvento">
+      <section id="localDoEvento" className="bg-6/50">
         <Local />
       </section>
       <section>

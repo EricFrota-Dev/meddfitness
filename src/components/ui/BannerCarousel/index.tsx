@@ -7,13 +7,21 @@ import { CustomLeftArrow, CustomRightArrow } from "./Arrows";
 const BannerCarousel = () => {
   const responsive = {
     desktop: {
-      breakpoint: { max: 3000, min: 460 },
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 600 },
+      items: 1,
+    },
+    mobile: {
+      breakpoint: { max: 600, min: 0 },
       items: 1,
     },
   };
 
   return (
-    <div className="w-screen flex justify-center -z-10">
+    <div className="w-screen flex justify-center">
       <Carousel
         additionalTransfrom={0}
         arrows

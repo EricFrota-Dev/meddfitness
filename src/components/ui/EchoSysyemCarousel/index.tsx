@@ -2,6 +2,7 @@ import { echoSysyemCardProps } from "./types";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import EchoSysyemCard from "./EchoSysyemCard";
+import { CustomLeftArrow, CustomRightArrow } from "../BannerCarousel/Arrows";
 
 const EchoSysyemCarousel: React.FC<echoSysyemCardProps> = ({ items }) => {
   const responsive = {
@@ -59,7 +60,9 @@ const EchoSysyemCarousel: React.FC<echoSysyemCardProps> = ({ items }) => {
       showDots={false}
       sliderClass=""
       slidesToSlide={2}
-      swipeable>
+      swipeable
+      customLeftArrow={<CustomLeftArrow />}
+      customRightArrow={<CustomRightArrow />}>
       {items.concat(items).map(({ title, src, desc }, index) => (
         <EchoSysyemCard key={index} title={title} src={src} desc={desc} />
       ))}

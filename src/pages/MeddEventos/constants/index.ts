@@ -19,3 +19,5 @@ export const events: event[] = [
     title: "Mundo Psychodelico",
   },
 ];
+export const videoIFBB =
+  "https://www.youtube.com/embed/t3s35hksxQ8?autoplay=1&mute=1";

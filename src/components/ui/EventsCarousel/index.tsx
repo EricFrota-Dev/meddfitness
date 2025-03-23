@@ -2,6 +2,7 @@ import EventCard from "./EventCard";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { eventsCardProps } from "./types";
+import { CustomLeftArrow, CustomRightArrow } from "../BannerCarousel/Arrows";
 
 const EventsCarousel: React.FC<eventsCardProps> = ({ items }) => {
   return (
@@ -32,7 +33,9 @@ const EventsCarousel: React.FC<eventsCardProps> = ({ items }) => {
         }}
         showDots={false}
         slidesToSlide={1}
-        swipeable>
+        swipeable
+        customLeftArrow={<CustomLeftArrow />}
+        customRightArrow={<CustomRightArrow />}>
         {items.map(({ title, src }, index) => (
           <EventCard key={index} title={title} src={src} />
         ))}

@@ -1,7 +1,7 @@
 import { entryAnimation } from "@/animations";
 import EventsCarousel from "@/components/ui/EventsCarousel";
 import { motion } from "motion/react";
-import { events } from "./constants";
+import { events, videoIFBB } from "./constants";
 import VideoContainer from "./components/VideoContainer";
 
 const MeddEventos = () => {
@@ -49,7 +49,7 @@ const MeddEventos = () => {
             initial="from_bottom"
             whileInView="default"
             className="w-full h-full flex justify-center items-center">
-            <VideoContainer videoUrl="https://www.youtube.com/embed/t3s35hksxQ8?autoplay=1&mute=1" />
+            <VideoContainer videoUrl={videoIFBB} />
           </motion.h1>
         </div>
       </section>

@@ -26,7 +26,13 @@ const Accordion = ({ items }: accordionProps) => {
             }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden">
-            <div className="p-3 ml-3 text-1/50">{response}</div>
+            <ul>
+              {response.map((res, i) => (
+                <li key={i} className="p-3 ml-3 text-1/50">
+                  {res}
+                </li>
+              ))}
+            </ul>
           </motion.div>
         </div>
       ))}

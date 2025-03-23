@@ -31,7 +31,14 @@ const AtractionCard: React.FC<atractionProps> = ({
             <span>{subTitle}</span>
           </h2>
         )}
-        <p>{desc}</p>
+        <ul>
+          {desc.map((description, i) => (
+            <>
+              <li key={i}>{description}</li>
+              <br />
+            </>
+          ))}
+        </ul>
       </div>
       <div
         className={`w-full xl:w-fit flex justify-center gap-6 ${

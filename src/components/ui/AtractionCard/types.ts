@@ -1,7 +1,8 @@
 export type atractionProps = {
+  id?: number;
   title: string;
   subTitle?: string;
-  desc: string;
+  desc: string[];
   images: string[];
-  isLeft: boolean;
+  isLeft?: boolean;
 };

@@ -1,6 +1,8 @@
 import { entryAnimation } from "@/animations";
 import EventsCarousel from "@/components/ui/EventsCarousel";
 import { motion } from "motion/react";
+import { events } from "./constants";
+import VideoContainer from "./components/VideoContainer";
 
 const MeddEventos = () => {
   return (
@@ -9,7 +11,7 @@ const MeddEventos = () => {
         <div className="customContainer grid grid-cols-1 md:grid-cols-2 min-h-150">
           <div className="flex justify-center">
             <div className="flex items-center">
-              <EventsCarousel />
+              <EventsCarousel items={events} />
             </div>
           </div>
           <div className="flex flex-1 flex-col gap-4 md:px-10 justify-center">
@@ -46,8 +48,8 @@ const MeddEventos = () => {
             variants={entryAnimation()}
             initial="from_bottom"
             whileInView="default"
-            className="bg-6 w-full h-full flex justify-center items-center">
-            Videos
+            className="w-full h-full flex justify-center items-center">
+            <VideoContainer videoUrl="https://www.youtube.com/embed/t3s35hksxQ8?autoplay=1&mute=1" />
           </motion.h1>
         </div>
       </section>

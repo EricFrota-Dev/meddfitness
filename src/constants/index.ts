@@ -7,10 +7,6 @@ import {
   fitFem01,
   fitFem02,
 } from "@/assets/images/categorias";
-
-import CarnavalDaIvete from "@/assets/images/events/CarnavalDaIvete.jpg";
-import EventoMissFit from "@/assets/images/events/EventoMissFit.jpg";
-import MundoPsychodelico from "@/assets/images/events/MundoPsychodelico.jpg";
 import {
   BetaoMonteiro,
   CassioBirque,
@@ -49,28 +45,11 @@ import {
 } from "@/assets/images/logos";
 import { books, hands, instruments, network } from "@/assets/icons";
 import { banner1, banner2, banner3 } from "@/assets/images/banners";
-import { simpleCard, simpleImage } from "./types";
+import { categoryFem, simpleCard, simpleImage } from "./types";
 import { lazy } from "react";
+import { atractionProps } from "@/components/ui/AtractionCard/types";
 
 // LISTIS #############################################
-
-export const events = [
-  {
-    id: 0,
-    src: CarnavalDaIvete,
-    name: "Carnaval da Ivete",
-  },
-  {
-    id: 1,
-    src: EventoMissFit,
-    name: "Evento MissFit",
-  },
-  {
-    id: 2,
-    src: MundoPsychodelico,
-    name: "Mundo Psychodelico",
-  },
-];
 
 export const premiacoes = [
   {
@@ -114,24 +93,57 @@ export const premiacoes = [
   },
 ];
 
-export const categorias = [
+export const categorias: categoryFem[] = [
   {
     id: 0,
     title: "FITNESS FEMININO",
-    desc: "Este conceito foi introduzido pela IFBB no início dos anos 90, começando como competição oficial em 1996 em resposta à crescente demanda por competições para mulheres que preferem desenvolver um físico menos musculoso, mas atlético e esteticamente agradável e também mostrar seus físicos em movimento",
-    images: [bikiniFitFem01, bikiniFitFem02],
+    desc: [
+      "Este conceito foi introduzido pela IFBB no início dos anos 90, começando como competição oficial em 1996 em resposta à crescente demanda por competições para mulheres que preferem desenvolver um físico menos musculoso, mas atlético e esteticamente agradável e também mostrar seus físicos em movimento",
+    ],
+    images: [fitFem01, fitFem02],
   },
   {
     id: 1,
-    title: "FITNESS FEMININO",
-    desc: "Este conceito foi introduzido pela IFBB no início dos anos 90, começando como competição oficial em 1996 em resposta à crescente demanda por competições para mulheres que preferem desenvolver um físico menos musculoso, mas atlético e esteticamente agradável e também mostrar seus físicos em movimento",
+    title: "BODYFITNESS FEMININO",
+    desc: [
+      "O Bodyfitness foi implementado pela IFBB em 2002 para dar uma chance de competir para um amplo grupo de mulheres bem torneadas sem as rodadas de rotina, apenas as de físico.",
+      "Esta fórmula provou ser útil e o número de competidoras participantes aumenta a cada ano.",
+      "Mais tarde, a IFBB criou para elas a possibilidade de mostrar sua figura em movimento durante uma curta apresentação individual no palco chamada “I-walking”",
+    ],
     images: [bodyFitFem01, bodyFitFem02],
   },
   {
     id: 2,
     title: "FITNESS FEMININO",
-    desc: "Este conceito foi introduzido pela IFBB no início dos anos 90, começando como competição oficial em 1996 em resposta à crescente demanda por competições para mulheres que preferem desenvolver um físico menos musculoso, mas atlético e esteticamente agradável e também mostrar seus físicos em movimento",
+    desc: [
+      "Esta categoria foi introduzida em 2011 e é voltada para mulheres que mantêm o corpo em forma e comem de forma saudável. As linhas gerais do corpo, equilíbrio e proporções, tônus ​​corporal e aparência saudável são levados em consideração. Treinamento de peso de alta intensidade e músculos duros e magros não são necessários. A ênfase está em uma aparência bem formada, em forma, saudável e atraente, semelhante à das modelos.",
+    ],
+    images: [bikiniFitFem01, bikiniFitFem02],
+  },
+  {
+    id: 3,
+    title: "FITNESS BEM-ESTAR FEMININO",
+    desc: [
+      "A divisão Wellness Fitness é destinada a mulheres que preferem um físico musculoso sem separação muscular, atlético e esteticamente agradável, com uma massa corporal maior do que no Bikini Fitness. Deste ponto de vista, o Wellness Fitness está em algum lugar entre o Bikini Fitness e o Women's Physique.",
+    ],
     images: [fitFem01, fitFem02],
+  },
+  {
+    id: 4,
+    title: "MISS FIT MODEL",
+    desc: [
+      "A divisão é destinada a mulheres que possuem atributos no conjunto geral em uma época de constante busca pela quebra dos padrões estéticos, A busca agora é por candidatas que precisam ter uma representatividade muito grande, pois a forma como elas se comunicam e o que representam é mais importante do que seu visual. Nos concursos de hoje busca-se mais personalidade e consciência.",
+    ],
+    images: [bodyFitFem01, bodyFitFem02],
+  },
+  {
+    id: 5,
+    title: "APTIDÃO FÍSICA PARA CRIANÇAS",
+    desc: [
+      "Children Fitness é a única divisão esportiva da IFBB disponível para crianças, sem limite de idade inferior. O limite de idade superior é 16 anos. Então, as crianças vão para a divisão de idade júnior.",
+      "O Fitness Infantil é uma das categorias mais bonitas, em um ambiente familiar, pois é obrigatório que os atletas tenham a mãe (que geralmente também é uma atleta da IFBB) como treinadora e, portanto, os eventos de Fitness Infantil da IFBB são uma celebração maravilhosa, repleta de famílias com estilo de vida fitness, nas quais as crianças, seguindo os passos de seus pais, iniciam suas carreiras esportivas, para se tornarem mais tarde os campeões do futuro.",
+    ],
+    images: [bikiniFitFem01, bikiniFitFem02],
   },
 ];
 
@@ -163,33 +175,41 @@ export const parceiros = [
   },
 ];
 
-export const atractions = [
+export const atractions: atractionProps[] = [
   {
     id: 0,
     subTitle: "UNIVERSO CASUO",
     title: "CIRQUE DU SOLEIL",
-    desc: "Espetáculo artístico criado por Marcos Casuo, ex-integrante do Cirque du Soleil, unindo música, performance e acrobacias em um show único e vibrante.",
+    desc: [
+      "Espetáculo artístico criado por Marcos Casuo, ex-integrante do Cirque du Soleil, unindo música, performance e acrobacias em um show único e vibrante.",
+    ],
     images: [casuoAtraction1, casuoAtraction2],
   },
   {
     id: 1,
     title: "ANATOLY",
     subTitle: "VLADIMIR SHMONDENKO",
-    desc: "Atleta de fisiculturismo de renome internacional, referência em treinamento de alto rendimento e desenvolvimento muscular extremo.",
+    desc: [
+      "Atleta de fisiculturismo de renome internacional, referência em treinamento de alto rendimento e desenvolvimento muscular extremo.",
+    ],
     images: [anatoly1, anatoly2],
   },
   {
     id: 2,
     title: "STEVEN SEAGAL",
     subTitle: "ATOR",
-    desc: "Ator, mestre em artes marciais e ícone dos filmes de ação, conhecido por sua destreza no Aikido e por sua carreira no cinema de Hollywood.",
+    desc: [
+      "Ator, mestre em artes marciais e ícone dos filmes de ação, conhecido por sua destreza no Aikido e por sua carreira no cinema de Hollywood.",
+    ],
     images: [stevenSagal1, stevenSagal2],
   },
   {
     id: 3,
     title: "ZÉ NETO E CRISTIANO",
     subTitle: "CANTOR SERTAJEJO",
-    desc: "Uma das duplas sertanejas mais populares do Brasil, conhecida por seus sucessos românticos e animados que conquistam multidões.",
+    desc: [
+      "Uma das duplas sertanejas mais populares do Brasil, conhecida por seus sucessos românticos e animados que conquistam multidões.",
+    ],
     images: [zeNetoCristiano1, zeNetoCristiano2],
   },
 ];

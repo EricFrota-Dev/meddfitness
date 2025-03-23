@@ -14,6 +14,7 @@ import Partner from "./components/Partner";
 import Volunteer from "./components/Volunteer";
 import Downloads from "./components/Downloads";
 import Speakers from "./components/Speakers";
+import DailyTickets from "./components/DailyTickets";
 
 const MeddFitness2025 = () => {
   return (
@@ -136,7 +137,7 @@ const MeddFitness2025 = () => {
         </div>
       </section>
       <section>
-        <Downloads />
+        <DailyTickets />
       </section>
     </>
   );

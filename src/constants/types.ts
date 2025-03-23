@@ -29,3 +29,9 @@ export type articleContent = {
   title: string;
   content: string;
 };
+export type categoryFem = {
+  id: number;
+  title: string;
+  desc: string[];
+  images: string[];
+};

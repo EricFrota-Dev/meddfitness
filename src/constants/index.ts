@@ -412,11 +412,13 @@ export const navegation = [
     id: "7",
     title: "MEDCAST",
     url: "/meddfitness/medd_eventos",
+    element: lazy(() => import("@/pages/MeddEventos")),
   },
   {
     id: "8",
     title: "CONTATO",
     url: "/meddfitness/medd_eventos",
+    element: lazy(() => import("@/pages/MeddEventos")),
   },
   // {
   //   id: "9",

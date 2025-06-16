@@ -379,7 +379,7 @@ export const navegation = [
   },
   {
     id: "2",
-    title: "MEDDFITNESS 2025", //congresso
+    title: "MEDDFITNESS CONGRESSO 2025", //congresso
     url: "/meddfitness/meddfittnes_2025",
     element: lazy(() => import("@/pages/MeddFittness2025")),
   },
@@ -408,14 +408,18 @@ export const navegation = [
   //   element: IfbbBrasil,
   // },
 
+  {
+    id: "7",
+    title: "MEDCAST",
+    url: "/meddfitness/medd_eventos",
+  },
+  {
+    id: "8",
+    title: "CONTATO",
+    url: "/meddfitness/medd_eventos",
+  },
   // {
-  //   id: "7",
-  //   title: "PODCAST MAROMBA",
-  //   url: "/meddfitness/podcast_maromba",
-  //   element: PodcastMaromba,
-  // },
-  // {
-  //   id: "8",
+  //   id: "9",
   //   title: "GUIA",
   //   url: "/meddfitness/guia",
   //   element: GuiaDoSite,

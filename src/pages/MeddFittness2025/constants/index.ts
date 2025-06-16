@@ -47,9 +47,8 @@ export const duvidasRespostas02: FAQsProps[] = [
     id: 0,
     question: "Quando será o MeddFitness 2025?",
     response: [
-      "Ocorrerá nos dia 25 e 26 de julho em São Jose do Rio Preto no Centro de Eventos",
-      "Av. José Munia, 5650 - Nova Redentora, CEP, 15090-500",
-      "Telefone: (17) 3201-8890",
+      "Ocorrerá de 07 a 09 de novenbro, na Arena Olímpia Shows & Eventos",
+      "Rua Projetada A, Sem N° - Parque do Sol, Olímpia-SP.",
     ],
   },
   {
@@ -74,8 +73,8 @@ export const duvidasRespostas02: FAQsProps[] = [
   },
   {
     id: 3,
-    question: "Onde se hospedar em Rio Preto?",
-    response: ["www.hotéis.com", "www.airbnb.com.br", "www.trivago.com.br"],
+    question: "Onde se hospedar em Olímpia?",
+    response: ["https://enjoyhoteis.com.br"],
   },
   {
     id: 4,

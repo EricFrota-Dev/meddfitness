@@ -1,6 +1,6 @@
 import Button from "@/components/ui/Button";
 import GradientCard from "@/components/ui/GradientCard";
-import localImg from "@/assets/images/Uncategorized/local.jpg";
+import localImg from "@/assets/images/Uncategorized/local2.webp";
 
 const Downloads = () => {
   return (

@@ -1,4 +1,4 @@
-import Logo from "./meddfitness-logo.svg";
+import Logo from "./meddfitness-logo-principal.svg";
 import anadem from "./anadem-logo.png";
 import megafitness from "./megafitness-logo.png";
 import ifbbBrasil from "./ifbb-brasil-logo.png";

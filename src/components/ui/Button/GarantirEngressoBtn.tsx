@@ -10,12 +10,14 @@ const GarantirEngressoBtn: React.FC<GarantirEngressoBtnProps> = ({
     <motion.div
       className={className}
       variants={pulseAnimation()}
-      animate="default">
+      animate="default"
+    >
       <Button
         typeBtn="redirect"
-        onClick={() => console.log('clicou em "GARANTIR O MEU INGRESSO"')}>
+        onClick={() => console.log('clicou em "GARANTIR O MEU INGRESSO"')}
+      >
         <p>
-          <strong className="text-center">GARANTIR O MEU INGRESSO</strong>
+          <strong className="text-center">GARANTA O SEU INGRESSO</strong>
         </p>
       </Button>
     </motion.div>

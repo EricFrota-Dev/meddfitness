@@ -25,7 +25,8 @@ const MeddFitness2025 = () => {
       <motion.section
         variants={entryAnimation()}
         initial="from_bottom"
-        animate="default">
+        animate="default"
+      >
         <div className="customContainer text-center px-20 bg-6/60">
           <div>
             <h1>
@@ -100,7 +101,7 @@ const MeddFitness2025 = () => {
       <section>
         <div className="bg-6/70 text-center py-10  px-6">
           <h1>
-            <span>MEDDFITNESS – São José do Rio Preto</span>
+            <span>MEDDFITNESS – Olímpia,SP.</span>
           </h1>
           <h2>
             Apoiar o MEDDFITNESS 2025 é conectar sua marca ao futuro do esporte,

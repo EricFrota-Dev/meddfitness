@@ -367,21 +367,27 @@ export const stafPerfilPhotos: simpleCard[] = [
 export const navegation = [
   {
     id: "0",
-    title: "TURMA",
-    url: "/meddfitness/turma",
+    title: "EQUIPE",
+    url: "/meddfitness/equipe",
     element: lazy(() => import("@/pages/Turma")),
   },
   {
-    id: "1",
-    title: "MEDDEVENTOS",
-    url: "/meddfitness/medd_eventos",
-    element: lazy(() => import("@/pages/MeddEventos")),
+    id: "6",
+    title: "MEGAFITNESS",
+    url: "/meddfitness/garota_megafittnes",
+    element: lazy(() => import("@/pages/GarotaMegaFitness")),
   },
   {
     id: "2",
-    title: "MEDDFITNESS 2025",
+    title: "MEDDFITNESS 2025", //congresso
     url: "/meddfitness/meddfittnes_2025",
     element: lazy(() => import("@/pages/MeddFittness2025")),
+  },
+  {
+    id: "1",
+    title: "MEDDEVENTOS", //eventos em grande estilo
+    url: "/meddfitness/medd_eventos",
+    element: lazy(() => import("@/pages/MeddEventos")),
   },
   // {
   //   id: "3",
@@ -401,12 +407,7 @@ export const navegation = [
   //   url: "/meddfitness/ifbb_brasil_store",
   //   element: IfbbBrasil,
   // },
-  {
-    id: "6",
-    title: "GAROTA MEGAFITNESS",
-    url: "/meddfitness/garota_megafittnes",
-    element: lazy(() => import("@/pages/GarotaMegaFitness")),
-  },
+
   // {
   //   id: "7",
   //   title: "PODCAST MAROMBA",

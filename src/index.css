@@ -3,10 +3,10 @@
 @theme {
   --font-primary: "Poppins", sans-serif;
   --color-1: #ffffff;
-  --color-2: #3ec1c9;
-  --color-3: #1a3d47;
-  --color-4: #142731;
-  --color-5: #0e121c;
+  --color-2: #37a7e6;
+  --color-3: #22668d;
+  --color-4: #344a55;
+  --color-5: #161616;
   --color-6: #000000;
 }
 :root {
@@ -23,9 +23,9 @@ span {
   color: var(--color-2);
 }
 
-.neon {
+/* .neon {
   text-shadow: 0 0 5px var(--color-2), 0 0 10px var(--color-2);
-}
+} */
 section {
   overflow-x: hidden;
   border-top: 1px solid #0d171d;

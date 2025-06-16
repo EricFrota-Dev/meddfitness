@@ -9,7 +9,7 @@ import FrontsMeddfitness from "./components/FrontsMeddfitness";
 import EchoSysyemCarousel from "@/components/ui/EchoSysyemCarousel";
 import MeddProject from "./components/MeddProject";
 
-const Turma = () => {
+const Equipe = () => {
   return (
     <>
       <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
@@ -33,7 +33,8 @@ const Turma = () => {
           className=" bg-2 text-5 text-center py-14 px-4 "
           variants={entryAnimation()}
           initial="from_left"
-          whileInView="default">
+          whileInView="default"
+        >
           <h1>APOSTAMOS NO INÉDITO. FAZEMOS O QUE NINGUÉM FAZ!</h1>
         </motion.div>
       </section>
@@ -52,7 +53,8 @@ const Turma = () => {
           className="bg-gradient-to-t from-3 to-4  text-1 text-center py-20 px-4"
           variants={entryAnimation()}
           initial="from_right"
-          whileInView="default">
+          whileInView="default"
+        >
           <h1>Mais de 500 eventos realizados!</h1>
         </motion.div>
       </section>
@@ -61,4 +63,4 @@ const Turma = () => {
   );
 };
 
-export default Turma;
+export default Equipe;
